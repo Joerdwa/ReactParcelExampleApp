@@ -11,7 +11,9 @@
   },
   "scripts": {
     "start": "NODE_ENV=development parcel public/index.html --open",
-    "build": "NODE_ENV=production parcel build public/index.html --public-url ./"
+    "build": "NODE_ENV=production parcel build public/index.html --public-url ./",
+    "test:eslint": "eslint src/ --ext .js --ext .jsx",
+    "pretest": "npm run-script test:eslint"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,8 +26,17 @@
   ],
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^5.10.0",
+    "eslint-config-react-app": "^3.0.5",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "sass": "^1.15.2"
   }
 }
